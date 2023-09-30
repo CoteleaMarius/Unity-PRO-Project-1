@@ -12,7 +12,7 @@ public class TurretScript : MonoBehaviour
     [SerializeField] private float countdown;
     private bool _isSecondBarrel;
     private bool _canShoot = true;
-
+    private float _turnSpeed = 10f;
     private void Start()
     {
         InvokeRepeating(nameof(FindTarget), 0f, 0.3f);
@@ -20,9 +20,15 @@ public class TurretScript : MonoBehaviour
 
     private void Update()
     {
+        Look();
+    }
+
+    private void Look()
+    {
         if (target != null)
         {
-            transform.LookAt(target);
+            Quaternion look = Quaternion.LookRotation(target.position - transform.position);
+            transform.rotation = Quaternion.Lerp(transform.rotation, look, Time.deltaTime * _turnSpeed);
             if (_canShoot)
             {
                 StartCoroutine(_isSecondBarrel ? Shoot(0) : Shoot(1));
@@ -31,7 +37,7 @@ public class TurretScript : MonoBehaviour
             }
         }
     }
-
+    
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.blue;

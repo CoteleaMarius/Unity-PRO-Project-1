@@ -177,6 +177,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 7077127333532197315, guid: 44792e8e613913b4fafa616015050643, type: 3}
   range: 3
+  bulletPrefab: {fileID: 6535772189558432248, guid: c9ca16de83e5e3446a83fc0b1c1fd095, type: 3}
+  gunBarrel:
+  - {fileID: 6644770142648722686}
+  - {fileID: 3555421812628910733}
+  countdown: 1
 --- !u!1001 &3954805785826471518
 PrefabInstance:
   m_ObjectHideFlags: 0
