@@ -4,7 +4,7 @@ public class TurretScript : MonoBehaviour
 {
     [SerializeField] private Transform target;
     [SerializeField] private float range;
-
+    [SerializeField] private GameObject particles;
     [Header("Bullet setting")] [SerializeField]
     private GameObject bulletPrefab;
 
@@ -12,7 +12,14 @@ public class TurretScript : MonoBehaviour
     [SerializeField] private float countdown;
     private bool _isSecondBarrel;
     private bool _canShoot = true;
-    private float _turnSpeed = 10f;
+    private readonly float _turnSpeed = 10f;
+    [SerializeField] private AudioSource audioSource;
+
+    private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+    
     private void Start()
     {
         InvokeRepeating(nameof(FindTarget), 0f, 0.3f);
@@ -29,10 +36,11 @@ public class TurretScript : MonoBehaviour
         {
             Quaternion look = Quaternion.LookRotation(target.position - transform.position);
             transform.rotation = Quaternion.Lerp(transform.rotation, look, Time.deltaTime * _turnSpeed);
-            if (_canShoot)
+            if (_canShoot && TargetLock())
             {
                 StartCoroutine(_isSecondBarrel ? Shoot(0) : Shoot(1));
-
+                audioSource.Play();
+                audioSource.pitch = Random.Range(0.9f, 1.1f);
                 _canShoot = !_canShoot;
             }
         }
@@ -74,12 +82,20 @@ public class TurretScript : MonoBehaviour
     {
         GameObject bullet =  Instantiate(bulletPrefab, gunBarrel[barrelNumber]);
         BulletScript bulletScript = bullet.GetComponent<BulletScript>();
+        Instantiate(particles, transform);
         bulletScript.TakeForce(target);
         bullet.transform.SetParent(null);
         _isSecondBarrel = !_isSecondBarrel;
   
         yield return new WaitForSeconds(countdown);
         _canShoot = !_canShoot;
+    }
+
+    private bool TargetLock()
+    {
+        float angle = Quaternion.Angle(transform.rotation, target.rotation);
+        if (angle > 80 && angle < 100) return true;
+        else return false;
     }
     
 }

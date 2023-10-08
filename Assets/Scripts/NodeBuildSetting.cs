@@ -9,9 +9,9 @@ public class NodeBuildSetting : MonoBehaviour
         return _structure;
     }
     
-    public void StartBuild(GameObject[] structure, int structureIndex, float high)
+    public void StartBuild(GameObject[] structure, int structureIndex, float high, int cost)
     {
-        if (this._structure == null)
+        if (this._structure == null && CoinController.SubtractCoin(cost))
         {
             var position1 = transform.position;
             Vector3 position = new Vector3(position1.x, position1.y + high, position1.z);

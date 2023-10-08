@@ -5,7 +5,8 @@ public class EnemySetting : MonoBehaviour
     [SerializeField] private uint health;
     [SerializeField] private float speed;
     [SerializeField] private float acceleration;
-
+    [SerializeField] private GameObject boomFX;
+    
     public float GetSpeed()
     {
         return speed;
@@ -18,8 +19,12 @@ public class EnemySetting : MonoBehaviour
 
     public void Damage(uint damageValue)
     {
-        if (damageValue > health) return;
+        if (damageValue > health)
+        {
+            CoinController.AddCoin(15);
+            Instantiate(boomFX, transform.position, Quaternion.Euler(-90f, 0f, 0f));
+            Destroy(gameObject);
+        }
         health -= damageValue;
-        if(health <= 0) Destroy(gameObject);
     }
 }

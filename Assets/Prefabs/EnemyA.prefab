@@ -161,6 +161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3352ed761a574fb48b653738cb623487, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 30
+  health: 20
   speed: 1.5
   acceleration: 0
+  boomFX: {fileID: 6276143692878410321, guid: 23f6cc114634d984f92b8a9dbeeeb582, type: 3}
