@@ -6,19 +6,18 @@ public class BuildManager : MonoBehaviour
     [SerializeField] private Color startColor;
     private GameObject _tempObj;
     [SerializeField] private GameObject[] turrets;
-    private bool canBuild = false;
-    private int turretIndex;
-    private int cost;
+    private bool _canBuild;
+    private int _turretIndex;
+    private int _cost;
     
     private void Update()
     {
         if (Camera.main != null)
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit raycastHit;
-            if (Physics.Raycast(ray, out raycastHit))
+            if (Physics.Raycast(ray, out var raycastHit))
             {
-                if (raycastHit.collider.gameObject.CompareTag("Node") && canBuild)
+                if (raycastHit.collider.gameObject.CompareTag("Node") && _canBuild)
                 {
                     _tempObj = raycastHit.collider.gameObject;
                     _tempObj.GetComponent<MeshRenderer>().material.color = hoverColor;
@@ -33,19 +32,19 @@ public class BuildManager : MonoBehaviour
             }
         }
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && _canBuild)
         {
-            _tempObj.GetComponent<NodeBuildSetting>().StartBuild(turrets, 0, 0.35f, cost);
-            canBuild = false;
+            _tempObj.GetComponent<NodeBuildSetting>().StartBuild(turrets, _turretIndex, 0.35f, _cost);
+            _canBuild = false;
         }
         
     }
 
     public void SetBuildTurret(int buildCost, int buildIndex)
     {
-        turretIndex = buildIndex;
-        cost = buildCost;
-        canBuild = true;
+        _turretIndex = buildIndex;
+        _cost = buildCost;
+        _canBuild = true;
     }
     
 }
