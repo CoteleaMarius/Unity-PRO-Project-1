@@ -9,7 +9,6 @@ public class BuildManager : MonoBehaviour
     private bool _canBuild;
     private int _turretIndex;
     private int _cost;
-    
     private void Update()
     {
         if (Camera.main != null)
@@ -37,7 +36,6 @@ public class BuildManager : MonoBehaviour
             _tempObj.GetComponent<NodeBuildSetting>().StartBuild(turrets, _turretIndex, 0.35f, _cost);
             _canBuild = false;
         }
-        
     }
 
     public void SetBuildTurret(int buildCost, int buildIndex)

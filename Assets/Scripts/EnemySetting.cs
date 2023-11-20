@@ -21,7 +21,7 @@ public class EnemySetting : MonoBehaviour
     {
         if (damageValue > health)
         {
-            CoinController.AddCoin(15);
+            CoinController.AddCoin(10);
             Instantiate(boomFX, transform.position, Quaternion.Euler(-90f, 0f, 0f));
             Destroy(gameObject);
         }

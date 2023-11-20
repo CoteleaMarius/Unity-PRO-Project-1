@@ -163,27 +163,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 13175734b4509c348ae1cd8857b808fc, type: 3}
   m_PrefabInstance: {fileID: 3664784721529152776}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7062046295860590672
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4475038268614449241}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4044303847515cb429023477e7d900b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 7077127333532197315, guid: 44792e8e613913b4fafa616015050643, type: 3}
-  range: 3
-  particles: {fileID: 4021103657954561961, guid: 5c755f9bc5253ea418e919994537dcc7, type: 3}
-  bulletPrefab: {fileID: 6535772189558432248, guid: c9ca16de83e5e3446a83fc0b1c1fd095, type: 3}
-  gunBarrel:
-  - {fileID: 6644770142648722686}
-  - {fileID: 3555421812628910733}
-  countdown: 3
-  audioSource: {fileID: 0}
 --- !u!82 &5810178233183129804
 AudioSource:
   m_ObjectHideFlags: 0
@@ -280,6 +259,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &7062046295860590672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4475038268614449241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4044303847515cb429023477e7d900b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 7077127333532197315, guid: 44792e8e613913b4fafa616015050643, type: 3}
+  range: 3
+  particles: {fileID: 4021103657954561961, guid: 5c755f9bc5253ea418e919994537dcc7, type: 3}
+  bulletPrefab: {fileID: 6535772189558432248, guid: c9ca16de83e5e3446a83fc0b1c1fd095, type: 3}
+  gunBarrel:
+  - {fileID: 6644770142648722686}
+  - {fileID: 3555421812628910733}
+  countdown: 1.5
+  audioSource: {fileID: 5810178233183129804}
 --- !u!1001 &3954805785826471518
 PrefabInstance:
   m_ObjectHideFlags: 0

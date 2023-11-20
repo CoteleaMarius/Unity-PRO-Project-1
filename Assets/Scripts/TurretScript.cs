@@ -32,13 +32,16 @@ public class TurretScript : MonoBehaviour
 
     private void Look()
     {
+        int barrelNumber = 0;
         if (target != null)
         {
             Quaternion look = Quaternion.LookRotation(target.position - transform.position);
             transform.rotation = Quaternion.Lerp(transform.rotation, look, Time.deltaTime * _turnSpeed);
             if (_canShoot && TargetLock())
             {
-                StartCoroutine(_isSecondBarrel ? Shoot(0) : Shoot(1));
+                StartCoroutine(Shoot(barrelNumber));
+                barrelNumber++;
+                if (barrelNumber == gunBarrel.Length) barrelNumber = 0;
                 audioSource.Play();
                 audioSource.pitch = Random.Range(0.9f, 1.1f);
                 _canShoot = !_canShoot;

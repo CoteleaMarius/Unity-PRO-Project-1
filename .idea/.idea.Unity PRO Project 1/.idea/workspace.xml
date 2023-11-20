@@ -6,8 +6,19 @@
   <component name="ChangeListManager">
     <list default="true" id="9cc676da-653d-48f6-8c39-b0f695af40dd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Unity PRO Project 1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Unity PRO Project 1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/Turret.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/Turret.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Impacts/CFXR Hit A (Red).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Impacts/CFXR Hit A (Red).prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bullet.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Turret.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Turret.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TurretItem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/TurretItem.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Example.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Example.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/BuildManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BuildManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemySetting.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemySetting.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TurretScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TurretScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,6 +111,15 @@
       <workItem from="1697024191560" duration="424000" />
       <workItem from="1697024642591" duration="666000" />
       <workItem from="1697366962707" duration="726000" />
+      <workItem from="1697891041161" duration="731000" />
+      <workItem from="1698527331719" duration="438000" />
+      <workItem from="1698527839478" duration="1120000" />
+      <workItem from="1699128807580" duration="2271000" />
+      <workItem from="1699183403607" duration="1768000" />
+      <workItem from="1699898004003" duration="151000" />
+      <workItem from="1700121217325" duration="383000" />
+      <workItem from="1700327542402" duration="66000" />
+      <workItem from="1700480154391" duration="1354000" />
     </task>
     <servers />
   </component>
